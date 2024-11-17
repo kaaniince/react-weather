@@ -14,6 +14,7 @@ Kodluyoruz Eğitimi kapsamında yaptığım React tabanlı hava durumu uygulamas
 
 ```
 git clone https://github.com/kaaniince/react-weather.git
+```
 
 ## Usage
 
@@ -31,4 +32,7 @@ code .
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+```
+
 ```
