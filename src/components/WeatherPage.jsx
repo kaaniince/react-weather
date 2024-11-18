@@ -10,9 +10,24 @@ const WeatherPage = () => {
   if (isLoading) return <div>Yükleniyor...</div>;
   if (!weatherData) return <div>Hava durumu verisi bulunamadı.</div>;
 
-  const dailyData = weatherData.list.filter((reading) =>
-    reading.dt_txt.includes("12:00:00")
-  );
+  const dailyData = weatherData.list
+    .reduce((acc, reading) => {
+      const readingDate = new Date(reading.dt_txt);
+      const today = new Date();
+      if (readingDate >= today) {
+        const readingDateStr = readingDate.toLocaleDateString();
+        if (
+          !acc.some(
+            (item) =>
+              new Date(item.dt_txt).toLocaleDateString() === readingDateStr
+          )
+        ) {
+          acc.push(reading);
+        }
+      }
+      return acc;
+    }, [])
+    .slice(0, 7);
 
   return (
     <div>
