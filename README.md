@@ -4,6 +4,8 @@ Kodluyoruz Eğitimi kapsamında yaptığım React tabanlı hava durumu uygulamas
 
 ![PROJECT](/images/weather.png)
 
+![PROJECT](/images/weather2.png)
+
 ![PROJECT](/images/dropdown.png)
 
 ![PROJECT](/images/location.png)
